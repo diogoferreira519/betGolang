@@ -1,0 +1,47 @@
+{
+  "realm": "golangbet",
+  "enabled": true,
+  "sslRequired": "none",
+  "roles": {
+    "realm": [
+      { "name": "wagering:write" },
+      { "name": "wagering:read" },
+      { "name": "wallet:admin" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "provider-a",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "provider-a-secret",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "standardFlowEnabled": false,
+      "defaultClientScopes": ["roles", "profile"]
+    },
+    {
+      "clientId": "provider-b",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "provider-b-secret",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "standardFlowEnabled": false,
+      "defaultClientScopes": ["roles", "profile"]
+    },
+    {
+      "clientId": "wallet-internal",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "wallet-internal-secret",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "standardFlowEnabled": false,
+      "defaultClientScopes": ["roles", "profile"]
+    }
+  ]
+}
